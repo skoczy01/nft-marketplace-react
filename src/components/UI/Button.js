@@ -1,4 +1,9 @@
 import classes from "./Button.module.scss";
 export const Button = (props) => {
-  return <button className={classes.button}>{props.children}</button>;
+  const size = props.size;
+  return (
+    <button className={`${classes.button} ${classes[props.size]}`}>
+      {props.children}
+    </button>
+  );
 };

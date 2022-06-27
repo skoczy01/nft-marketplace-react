@@ -16,8 +16,11 @@ export const Nav = () => {
     <nav className={classes.nav}>
       <h1 className={classes.title}>Sapphire</h1>
       {desktop && <DesktopMenu />}
-      <Input />
-      <Button>Sign In</Button>
+      <div className={desktop ? classes.wrapper : classes["wrapper-mobile"]}>
+        <Input />
+        <Button>Sign In</Button>
+      </div>
+
       {mobile && <MobileMenu />}
     </nav>
   );
