@@ -1,0 +1,9 @@
+@import "./style/variables.module.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bgc-color;
+  color: #fff;
+  overflow: hidden;
+}

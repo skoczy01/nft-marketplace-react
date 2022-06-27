@@ -1,0 +1,17 @@
+@import "../../style/variables.module.scss";
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 1024px;
+  max-height: 73px;
+  margin: 0 auto;
+  //   border: 1px solid white;
+  justify-content: space-around;
+  font-family: $font-main;
+}
+.title {
+  font-weight: bold;
+}

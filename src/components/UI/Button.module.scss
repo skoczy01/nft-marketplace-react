@@ -1,0 +1,25 @@
+@import "../../style/variables.module.scss";
+
+.button {
+  background: $button-gradient;
+  min-width: 93px;
+  width: 93px;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  padding: 5px 15px;
+  background-position: right top;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-position: left bottom;
+  color: #fff;
+  text-decoration: none;
+}
