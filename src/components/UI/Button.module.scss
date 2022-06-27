@@ -9,17 +9,22 @@
   margin-left: 10px;
   padding: 5px 15px;
   background-position: right top;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
   background-size: 200% auto;
-  color: white;
+  text-align: center;
+  transition: 0.4s;
+  color: $light;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .button:hover {
   background-position: left bottom;
-  color: #fff;
-  text-decoration: none;
+}
+
+.button.xl {
+  box-sizing: content-box;
+  width: 169px;
+  padding: 5px 15px;
+  margin: 0;
+  border-radius: 5px;
 }
