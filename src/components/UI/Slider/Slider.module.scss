@@ -1,0 +1,21 @@
+.slider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 3rem 0;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 3rem 0;
+    padding: 0 2rem;
+  }
+  .box {
+    flex-basis: 25%;
+  }
+  .image {
+    max-width: 10rem;
+  }
+}
