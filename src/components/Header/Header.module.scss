@@ -1,48 +1,8 @@
-@import "../../style/variables.module.scss";
-
 .header {
   display: flex;
   width: 90%;
+  max-width: 64rem;
   justify-content: space-between;
   margin: 0 auto;
-}
-.first-section {
-  box-sizing: border-box;
-  flex-basis: 50%;
-
-  .title {
-    margin: 2rem 0 0.5rem 0;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 4rem;
-    text-align: left;
-  }
-  .decription {
-    font-family: $font-desc;
-    width: 80%;
-  }
-
-  .numbers {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 4rem;
-    div {
-      flex-basis: 30%;
-      text-align: center;
-
-      p {
-        font-size: 3rem;
-        margin: 0;
-        font-weight: bold;
-        letter-spacing: 1px;
-      }
-      span {
-        font-size: 12px;
-        letter-spacing: 1px;
-      }
-    }
-  }
-}
-
-.second-section {
+  overflow-x: hidden;
 }

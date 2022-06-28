@@ -7,10 +7,10 @@
   width: 90%;
   max-width: 1024px;
   max-height: 73px;
-  margin: 0 auto;
-  //   border: 1px solid white;
+  margin: 0 auto 2rem auto;
   justify-content: space-around;
   font-family: $font-main;
+  overflow-x: hidden;
 }
 .title {
   font-weight: bold;
