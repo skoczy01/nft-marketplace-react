@@ -28,3 +28,18 @@
   margin: 0;
   border-radius: 5px;
 }
+.button.l {
+  box-sizing: content-box;
+  width: 150px;
+  padding: 5px 15px;
+  margin: 0;
+  border-radius: 5px;
+}
+.button.watch {
+  background: transparent;
+  color: $light;
+  border: 1px solid $light;
+}
+.button.watch:hover {
+  background-color: $active-btn;
+}

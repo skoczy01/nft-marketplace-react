@@ -1,10 +1,13 @@
 import React from "react";
 import classes from "./SectionNames.module.scss";
 export function SectionName(props) {
+  const fontClass = props.fontSize ? classes[props.fontSize] : "";
+  const titleClasses = `${classes.title} ${fontClass}`;
+
   return (
     <div className={classes.box}>
       <p className={classes["sub-title"]}> {props.subTitle}</p>
-      <h3 className={classes.title}>{props.children}</h3>
+      <h3 className={titleClasses}>{props.children}</h3>
     </div>
   );
 }
