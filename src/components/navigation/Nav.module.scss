@@ -10,7 +10,7 @@
   margin: 0 auto 2rem auto;
   justify-content: space-around;
   font-family: $font-main;
-  overflow-x: hidden;
+  z-index: 20;
 }
 .title {
   font-weight: bold;

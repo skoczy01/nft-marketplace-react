@@ -11,6 +11,7 @@ export const Nav = () => {
   const size = useWindowSize();
   const desktop = +size.width >= 1024;
   const mobile = +size.width <= 1023;
+  const miniMobile = +size.width <= 475;
 
   return (
     <nav className={classes.nav}>
@@ -18,9 +19,8 @@ export const Nav = () => {
       {desktop && <DesktopMenu />}
       <div className={desktop ? classes.wrapper : classes["wrapper-mobile"]}>
         <Input />
-        <Button>Sign In</Button>
+        {!miniMobile && <Button>Sign In</Button>}
       </div>
-
       {mobile && <MobileMenu />}
     </nav>
   );

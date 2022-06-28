@@ -4,6 +4,10 @@
   box-sizing: border-box;
   flex-basis: 50%;
 
+  @media (max-width: 1023px) {
+    margin-bottom: 1rem;
+    max-width: 354px;
+  }
   .title {
     margin: 0 0 0.5rem 0;
     font-weight: bold;
@@ -11,6 +15,9 @@
     font-size: 4rem;
     text-align: left;
 
+    @media (max-width: 1023px) {
+      font-size: 3rem;
+    }
     .text-effect {
       position: relative;
     }
@@ -25,6 +32,9 @@
       border: 2px solid transparent;
       border-top: 2px solid #770777;
       border-radius: 50%;
+      @media (max-width: 1023px) {
+        top: 190%;
+      }
     }
   }
   .decription {
@@ -45,6 +55,10 @@
         margin: 0;
         font-weight: bold;
         letter-spacing: 1px;
+
+        @media (max-width: 1023px) {
+          font-size: 1.5rem;
+        }
       }
       span {
         font-size: 12px;

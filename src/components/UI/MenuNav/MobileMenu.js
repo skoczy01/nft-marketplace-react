@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import menuClass from "./MobileMenu.module.scss";
-
-export const MobileMenu = (props) => {
+import { Button } from "../Button";
+import { useWindowSize } from "../../../hooks/use-windowSize";
+export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const size = useWindowSize();
+  const desktop = +size.width >= 1024;
+  const mobile = +size.width <= 1023;
+  const miniMobile = +size.width <= 475;
   const openHandler = () => {
     setIsOpen((prev) => !prev);
   };
@@ -36,6 +41,7 @@ export const MobileMenu = (props) => {
           <li className={menuClass["navigation-item"]}>
             <a href="#">Collection</a>
           </li>
+          {miniMobile && <Button>Sign in</Button>}
         </ul>
       </div>
     </div>
