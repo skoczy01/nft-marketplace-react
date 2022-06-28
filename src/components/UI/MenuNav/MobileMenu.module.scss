@@ -68,11 +68,11 @@
 }
 
 .navigation {
-  height: 50vh;
+  height: 300px;
   width: 250px;
   background-color: $light;
-  position: absolute;
-  top: 8rem;
+  position: fixed;
+  top: 6rem;
   right: 0%;
   transform: translateX(350px);
   border-radius: 10px;
