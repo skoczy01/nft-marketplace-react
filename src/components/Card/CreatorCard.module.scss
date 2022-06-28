@@ -1,0 +1,34 @@
+@import "../../style/variables.module.scss";
+
+.card {
+  display: flex;
+  width: 295px;
+  height: 63px;
+  background-color: $fill-color;
+  border-radius: 10px;
+  padding: 0.3rem 2rem;
+
+  .data-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 70px;
+      height: 45.21px;
+      border-radius: 10px;
+    }
+    .data {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0.5rem;
+      gap: 0.3rem;
+      h3,
+      h4 {
+        font-size: 0.8rem;
+        font-weight: normal;
+        margin: 0;
+      }
+    }
+  }
+}
