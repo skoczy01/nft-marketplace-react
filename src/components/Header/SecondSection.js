@@ -24,8 +24,8 @@ export function SecondSection() {
           <span className={classes.info}>0.45 ETH</span>
         </div>
         <div className={classes.item}>
-          <p className={classes["sub-title"]}>Current Bid</p>
-          <span className={classes.info}>900 Authors</span>
+          <p className={classes["sub-title"]}>Hodlers</p>
+          <span className={classes.info}>900 Hodlers</span>
         </div>
         <div className={classes.item}>
           <p className={classes["sub-title"]}>Ending In</p>

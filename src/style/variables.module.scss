@@ -10,6 +10,11 @@ $button-gradient: linear-gradient(
   #c367e6 51%,
   #2b5876 100%
 );
+$sub-title-grad: linear-gradient(
+  to bottom,
+  rgba(156, 118, 184, 1) 0%,
+  rgba(156, 118, 184, 0) 100%
+);
 //font's
 $font-main: "Space Grotesk", Arial, sans-serif;
 $font-sec: "DM Mono", monospace, Arial, sans-serif;

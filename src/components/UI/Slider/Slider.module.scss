@@ -9,13 +9,17 @@
     display: flex;
     align-items: center;
     width: 100%;
-    margin: 3rem 0;
+    max-width: 1024px;
+
+    margin: 3rem auto;
     padding: 0 2rem;
   }
   .box {
     flex-basis: 25%;
+    margin: 0 0.5rem;
   }
   .image {
-    max-width: 10rem;
+    width: 160px;
+    max-width: 100%;
   }
 }
