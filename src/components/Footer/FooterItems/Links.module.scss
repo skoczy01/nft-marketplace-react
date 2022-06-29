@@ -1,0 +1,33 @@
+@import "../../../style/variables.module.scss";
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 50%;
+  .list-box {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    min-width: 140px;
+
+    h3 {
+      font-size: 1.3rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      li a {
+        font-size: 1rem;
+        color: $light;
+      }
+    }
+  }
+  .list-box:nth-last-of-type(2) {
+    text-align: center;
+  }
+  .list-box:nth-last-of-type(1) {
+    text-align: right;
+  }
+}

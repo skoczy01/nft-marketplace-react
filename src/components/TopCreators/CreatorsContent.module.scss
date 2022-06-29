@@ -5,11 +5,16 @@
 
   .grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 295px));
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 286px));
+    margin: 2rem auto;
     width: 100%;
-    gap: 1rem 2rem;
+    gap: 2rem 1rem;
     align-items: center;
+    justify-content: center;
+  }
+
+  .btn-box {
+    display: flex;
     justify-content: center;
   }
 }

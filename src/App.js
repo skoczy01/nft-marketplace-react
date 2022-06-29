@@ -5,6 +5,8 @@ import { Slider } from "./components/UI/Slider/Slider";
 import { MainMarket } from "./components/Main/MainMarket";
 import { Offert } from "./components/Offert/Offert";
 import { TopCreators } from "./components/TopCreators/TopCreators";
+import { InviteSection } from "./components/InviteSection/InviteSection";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <MainMarket />
       <Offert />
       <TopCreators />
+      <InviteSection />
+      <Footer />
     </div>
   );
 }

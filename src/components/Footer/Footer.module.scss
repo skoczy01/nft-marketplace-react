@@ -1,0 +1,12 @@
+@import "../../style/variables.module.scss";
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  gap: 1.5rem;
+}

@@ -1,4 +1,5 @@
 import { CreatorCard } from "../Card/CreatorCard";
+import { Button } from "../UI/Button";
 import classes from "./CreatorsContent.module.scss";
 
 import img1 from "../../images/creator1.png";
@@ -36,6 +37,11 @@ export const CreatorsContent = () => {
   return (
     <div className={classes.container}>
       <div className={classes["grid-wrapper"]}>{items}</div>
+      <div className={classes["btn-box"]}>
+        <Button typeClass="watch" size="l">
+          Watch Video
+        </Button>
+      </div>
     </div>
   );
 };

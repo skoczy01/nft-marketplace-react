@@ -1,0 +1,18 @@
+@import "../../../style/variables.module.scss";
+
+.footer-end {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1024px;
+  margin: 1rem auto 90px auto;
+  color: $gray;
+
+  .links {
+    display: flex;
+    gap: 2rem;
+    a {
+      color: $gray;
+    }
+  }
+}
