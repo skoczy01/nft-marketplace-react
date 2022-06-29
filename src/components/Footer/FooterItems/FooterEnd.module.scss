@@ -8,9 +8,21 @@
   margin: 1rem auto 90px auto;
   color: $gray;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .links {
     display: flex;
     gap: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+    }
     a {
       color: $gray;
     }
