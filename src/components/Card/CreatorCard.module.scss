@@ -1,34 +1,76 @@
 @import "../../style/variables.module.scss";
 
 .card {
+  box-sizing: border-box;
   display: flex;
-  width: 295px;
+  justify-content: space-between;
+  align-items: center;
   height: 63px;
   background-color: $fill-color;
   border-radius: 10px;
-  padding: 0.3rem 2rem;
+  padding: 0.3rem 1rem;
 
   .data-box {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    img {
+    .main-bgc {
       width: 70px;
-      height: 45.21px;
-      border-radius: 10px;
+      height: 45px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
     }
+
     .data {
       display: flex;
       flex-direction: column;
       margin-left: 0.5rem;
       gap: 0.3rem;
       h3,
-      h4 {
+      p {
         font-size: 0.8rem;
         font-weight: normal;
         margin: 0;
       }
+
+      .value-box {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+
+        .bgc {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 17px;
+          height: 17px;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+        img {
+          height: 13px;
+          width: 10px;
+        }
+      }
+    }
+  }
+  .dots {
+    display: flex;
+    align-items: center;
+    height: 20%;
+    cursor: pointer;
+
+    div {
+      width: 5px;
+      height: 5px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 0.1rem;
     }
   }
 }

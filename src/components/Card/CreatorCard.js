@@ -1,16 +1,28 @@
 import classes from "./CreatorCard.module.scss";
+import eth from "../../images/Eth.png";
 
 export const CreatorCard = (props) => {
   return (
     <div className={classes.card}>
       <div className={classes["data-box"]}>
-        <img src={props.img} alt="" />
+        <div className={classes["main-bgc"]}>
+          <img src={props.img} alt="" />
+        </div>
         <div className={classes.data}>
           <h3>{props.name}</h3>
-          <h4>{props.totalVolume}</h4>
+          <div className={classes["value-box"]}>
+            <div className={classes.bgc}>
+              <img src={eth} alt="" />{" "}
+            </div>
+            <p>{props.totalVolume}</p>
+          </div>
         </div>
       </div>
-      <div className={classes.dots}>...</div>
+      <div className={classes.dots}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   );
 };
