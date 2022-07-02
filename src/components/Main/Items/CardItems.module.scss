@@ -30,6 +30,19 @@
       }
     }
   }
+
+  .errorMessage,
+  .not-found {
+    color: red;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 3rem 0;
+    font-family: $font-sec;
+  }
+  .not-found {
+    color: $gray;
+  }
 }
 
 .wrapper {
