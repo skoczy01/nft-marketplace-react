@@ -25,7 +25,7 @@ export const Links = () => {
         <ul>
           {item.items.map((li) => {
             return (
-              <li>
+              <li key={li}>
                 <a href="#">{li}</a>
               </li>
             );
