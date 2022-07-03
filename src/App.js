@@ -7,6 +7,7 @@ import { Offert } from "./components/Offert/Offert";
 import { TopCreators } from "./components/TopCreators/TopCreators";
 import { InviteSection } from "./components/InviteSection/InviteSection";
 import { Footer } from "./components/Footer/Footer";
+import { CategoryProvider } from "./components/store/CategoryProvider";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <Nav />
       <Header />
       <Slider />
-      <MainMarket />
+      <CategoryProvider>
+        <MainMarket />
+      </CategoryProvider>
       <Offert />
       <TopCreators />
       <InviteSection />

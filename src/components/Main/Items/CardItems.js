@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from "react";
-
+import React, { useState, useEffect, useCallback, useContext } from "react";
+import { CategoryContext } from "../../store/CategoryContext";
 import classes from "./CardItems.module.scss";
 import { Loader } from "../../UI/Loader";
 import { NftCard } from "../../Card/NftCard";
@@ -7,14 +7,17 @@ import { NftCard } from "../../Card/NftCard";
 export const CardItems = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+
   const [collections, setCollections] = useState([]);
+
+  const CategoryCtx = useContext(CategoryContext);
 
   const fetchCollections = useCallback(async () => {
     setIsLoading(true);
     setErrorMessage(null);
     try {
       const response = await fetch(
-        "https://nft-marketplace-react-d0bab-default-rtdb.europe-west1.firebasedatabase.app/categories/art.json"
+        `https://nft-marketplace-react-d0bab-default-rtdb.europe-west1.firebasedatabase.app/categories/${CategoryCtx.category}.json`
       );
       if (!response.ok) {
         throw new Error("Something went wrong!");
@@ -27,7 +30,7 @@ export const CardItems = () => {
       console.log(error);
     }
     setIsLoading(false);
-  }, []);
+  }, [CategoryCtx.category]);
 
   useEffect(() => {
     fetchCollections();
