@@ -16,9 +16,7 @@ export const CardItems = () => {
     setErrorMessage(null);
     try {
       const response = await fetch(
-        `https://nft-marketplace-react-d0bab-default-rtdb.europe-west1.firebasedatabase.app/categories/${
-          CategoryCtx.category + ".json"
-        }`
+        `https://nft-marketplace-react-d0bab-default-rtdb.europe-west1.firebasedatabase.app/categories/${CategoryCtx.category}.json`
       );
       if (!response.ok) {
         throw new Error("Something went wrong!");

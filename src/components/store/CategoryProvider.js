@@ -6,7 +6,6 @@ export const CategoryProvider = (props) => {
 
   const changeCategoryHandler = (name) => {
     setCategoryState(name);
-    console.log(categoryState);
   };
   const categoryContext = {
     category: categoryState,
