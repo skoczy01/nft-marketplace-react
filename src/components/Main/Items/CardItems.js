@@ -9,7 +9,6 @@ export const CardItems = () => {
   const [errorMessage, setErrorMessage] = useState(null);
 
   const [collections, setCollections] = useState([]);
-
   const CategoryCtx = useContext(CategoryContext);
 
   const fetchCollections = useCallback(async () => {
@@ -17,14 +16,19 @@ export const CardItems = () => {
     setErrorMessage(null);
     try {
       const response = await fetch(
-        `https://nft-marketplace-react-d0bab-default-rtdb.europe-west1.firebasedatabase.app/categories/${CategoryCtx.category}.json`
+        `https://nft-marketplace-react-d0bab-default-rtdb.europe-west1.firebasedatabase.app/categories/${
+          CategoryCtx.category + ".json"
+        }`
       );
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
-
       const data = await response.json();
-      setCollections(data);
+      if (data === null) {
+        setCollections([]);
+      } else {
+        setCollections(data);
+      }
     } catch (error) {
       setErrorMessage(error.message);
       console.log(error);
@@ -36,32 +40,38 @@ export const CardItems = () => {
     fetchCollections();
   }, [fetchCollections]);
 
-  let items = collections.map((item) => {
-    return item.items.map((imgData) => {
-      return (
-        <NftCard
-          key={Math.random() * 3124}
-          img={imgData.img}
-          name={imgData.name}
-          author={item.author}
-          authorImage={item.authorImage}
-          price={imgData.price}
-        />
-      );
+  let items;
+  if (collections === null) {
+    setCollections([]);
+  }
+  if (collections) {
+    items = collections.map((item) => {
+      return item.items.map((imgData) => {
+        return (
+          <NftCard
+            key={Math.random() * 3124}
+            img={imgData.img}
+            name={imgData.name}
+            author={item.author}
+            authorImage={item.authorImage}
+            price={imgData.price}
+          />
+        );
+      });
     });
-  });
+  }
 
-  useEffect(() => {
-    if (Object.keys(collections).length !== 0) {
-    }
-  }, [collections]);
+  // useEffect(() => {
+  //   if (Object.keys(collections).length !== 0) {
+  //   }
+  // }, [collections]);
 
   let content = <p className={classes["not-found"]}>Not Found Items</p>;
 
   if (isLoading) {
     content = <Loader />;
   }
-  if (collections.length > 0) {
+  if (collections.length !== 0) {
     content = null;
   }
 
