@@ -1,6 +1,12 @@
+import { useContext } from "react";
 import classes from "./Categories.module.scss";
+import { CategoryContext } from "../store/CategoryContext";
 
 export const Categories = () => {
+  const CategoryCtx = useContext(CategoryContext);
+  const changeCategory = (event) => {
+    CategoryCtx.changeCategory(event.target.name.toLowerCase());
+  };
   const category = [
     { id: 0, name: "Music" },
     { id: 1, name: "Art" },
@@ -14,7 +20,9 @@ export const Categories = () => {
   const categories = category.map((item) => {
     return (
       <li key={item.id}>
-        <button>{item.name}</button>
+        <button name={item.name} onClick={changeCategory}>
+          {item.name}
+        </button>
       </li>
     );
   });
