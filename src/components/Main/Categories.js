@@ -11,7 +11,7 @@ export const Categories = () => {
   const category = [
     { id: 0, name: "Music" },
     { id: 1, name: "Art" },
-    { id: 2, name: "sport" },
+    { id: 2, name: "Sport" },
     { id: 3, name: "Photography" },
     { id: 4, name: "Virtual Reality" },
     { id: 5, name: "Videos" },

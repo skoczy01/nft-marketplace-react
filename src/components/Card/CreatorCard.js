@@ -6,7 +6,10 @@ export const CreatorCard = (props) => {
     <div className={classes.card}>
       <div className={classes["data-box"]}>
         <div className={classes["main-bgc"]}>
-          <img src={props.img} alt="" />
+          <div
+            className={classes.creatorImage}
+            style={{ backgroundImage: `url(${props.img})` }}
+          ></div>
         </div>
         <div className={classes.data}>
           <h3>{props.name}</h3>

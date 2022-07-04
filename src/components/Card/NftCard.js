@@ -7,7 +7,10 @@ export const NftCard = (props) => {
   return (
     <React.Fragment>
       <div className={classes.card}>
-        <img src={props.img} alt={props.name} className={classes["main-img"]} />
+        <div
+          style={{ backgroundImage: `url(${props.img})` }}
+          className={classes["main-img"]}
+        ></div>
         <div className={classes["info-box"]}>
           <div className={classes.titles}>
             <h3>{props.name}</h3>
