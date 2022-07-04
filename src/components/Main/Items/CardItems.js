@@ -59,11 +59,6 @@ export const CardItems = () => {
     });
   }
 
-  // useEffect(() => {
-  //   if (Object.keys(collections).length !== 0) {
-  //   }
-  // }, [collections]);
-
   let content = <p className={classes["not-found"]}>Not Found Items</p>;
 
   if (isLoading) {
