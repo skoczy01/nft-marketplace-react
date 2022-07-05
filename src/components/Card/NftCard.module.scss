@@ -48,13 +48,16 @@
       }
     }
     .av-item {
-      max-width: 35px;
-      max-height: 35px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
 
       @media (max-width: 1023px) {
-        max-width: 30px;
-        max-height: 30px;
+        width: 30px;
+        height: 30px;
       }
     }
   }

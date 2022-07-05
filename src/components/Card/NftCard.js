@@ -18,11 +18,10 @@ export const NftCard = (props) => {
               Created by <span>{props.author}</span>
             </p>
           </div>
-          <img
-            src={props.authorImage}
-            alt={props.author}
+          <div
+            style={{ backgroundImage: `url(${props.authorImage})` }}
             className={classes["av-item"]}
-          />
+          ></div>
         </div>
         <div className={classes["count-box"]}>
           <div className={classes.item}>
